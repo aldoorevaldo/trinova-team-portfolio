@@ -1,3 +1,4 @@
+import PageTitle from "../components/PageTitle"
 import Container from "../components/Container"
 import SectionHeading from "../components/SectionHeading"
 import projects from "../data/projects"
@@ -6,6 +7,8 @@ import ProjectCard from "../components/ProjectCard"
 function Projects() {
   return (
     <>
+      <PageTitle title="Projects" />
+
       <section className="bg-trinova-surface py-20 sm:py-24">
         <Container>
           <SectionHeading

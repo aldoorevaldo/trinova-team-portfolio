@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom"
+import PageTitle from "../components/PageTitle"
 import Container from "../components/Container"
 import members from "../data/members"
 import BackLink from "../components/BackLink"
@@ -12,21 +13,29 @@ function Profile() {
 
   if (!member) {
     return (
-      <section className="bg-trinova-background py-24">
-        <Container>
-          <h1 className="text-3xl font-bold text-trinova-text">
-            Member Not Found
-          </h1>
+      <>
+        <PageTitle title="Member Not Found — TriNova" />
 
-          <p className="mt-4 text-trinova-muted">
-            The profile you are looking for does not exist.
-          </p>
-        </Container>
-      </section>
+        <section className="bg-trinova-background py-24">
+          <Container>
+            <h1 className="text-3xl font-bold text-trinova-text">
+              Member Not Found
+            </h1>
+
+            <p className="mt-4 text-trinova-muted">
+              The profile you are looking for does not exist.
+            </p>
+          </Container>
+        </section>
+      </>
     )
   }
 
   return (
+    <>
+      <PageTitle
+        title={`${member.name} - ${member.role} | TriNova`}
+      />
     <div className="bg-trinova-background">
 
       {/* Profile Header */}
@@ -277,6 +286,7 @@ function Profile() {
       </ProfileSection>
 
     </div>
+    </>
   )
 }
 
