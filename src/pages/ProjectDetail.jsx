@@ -55,7 +55,7 @@ function ProjectDetail() {
                 {project.category}
               </p>
 
-              <h1 className="mt-4 text-4xl font-bold tracking-tight text-trinova-text sm:text-5xl lg:text-6xl">
+              <h1 className="mt-4 max-w-full break-words text-4xl font-bold leading-[1.05] tracking-tight text-trinova-text sm:text-5xl lg:text-6xl">
                 {project.title}
               </h1>
 

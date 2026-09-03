@@ -6,7 +6,7 @@ const projects = [
     shortDescription:
       "A context-aware water quality monitoring system combining machine learning prediction with rule-based assessment.",
 
-    image: "/images/projects/aquaware.png",
+    image: "/images/projects/aquaaware.png",
 
     technologies: [
       "Python",
@@ -39,12 +39,12 @@ const projects = [
       "The team contributed to system architecture, machine learning integration, backend development, database design, and dashboard implementation.",
 
     screenshots: [
-      "/images/projects/aquaware.png",
-      "/images/projects/aquaware-2.png",
-      "/images/projects/aquaware-3.png",
+      "/images/projects/aquaaware.jpg",
+      "/images/projects/aquaaware-2.png",
+      "/images/projects/aquaaware-3.png",
     ],
 
-    github: "https://github.com/trinova/aquaware",
+    github: "https://github.com/aldoorevaldo/aquaware-iot-system",
     demo: "#",
   },
 
@@ -92,10 +92,9 @@ const projects = [
     screenshots: [
       "/images/projects/smartplant.png",
       "/images/projects/smartplant-2.png",
-      "/images/projects/smartplant-3.png",
     ],
 
-    github: "https://github.com/trinova/smartplant",
+    github: "https://github.com/Farhan-Nawwafal/ProjectZorinOSTeam",
     demo: "#",
   },
 
@@ -146,7 +145,7 @@ const projects = [
       "/images/projects/mengobrolmengobati-3.png",
     ],
 
-    github: "https://github.com/trinova/mengobrolmengobati",
+    github: "https://github.com/aldoorevaldo/MengobrolMengobati",
     demo: "#",
   },
   
