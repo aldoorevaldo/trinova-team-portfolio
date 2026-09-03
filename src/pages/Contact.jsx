@@ -1,4 +1,3 @@
-import { Github, Linkedin, Mail } from "lucide-react"
 import { Link } from "react-router-dom"
 
 import Container from "../components/Container"
@@ -9,7 +8,7 @@ import members from "../data/members"
 function Contact() {
   return (
     <>
-      <PageTitle title="Contact — TriNova" />
+      <PageTitle title="Contact" />
 
       <section className="bg-trinova-background py-20 sm:py-24 lg:py-28">
         <Container>
@@ -60,9 +59,8 @@ function Contact() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${member.name} GitHub`}
-                      className="inline-flex min-h-10 items-center gap-2 rounded-[10px] border border-trinova-border bg-white px-3.5 py-2 text-sm font-medium text-trinova-text transition duration-200 hover:border-trinova-accent hover:text-trinova-accent"
+                      className="inline-flex min-h-10 items-center justify-center rounded-[10px] border border-trinova-border bg-white px-4 py-2 text-sm font-medium text-trinova-text transition duration-200 hover:border-trinova-accent hover:text-trinova-accent"
                     >
-                      <Github size={17} strokeWidth={1.8} />
                       GitHub
                     </a>
                   )}
@@ -73,9 +71,8 @@ function Contact() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${member.name} LinkedIn`}
-                      className="inline-flex min-h-10 items-center gap-2 rounded-[10px] border border-trinova-border bg-white px-3.5 py-2 text-sm font-medium text-trinova-text transition duration-200 hover:border-trinova-accent hover:text-trinova-accent"
+                      className="inline-flex min-h-10 items-center justify-center rounded-[10px] border border-trinova-border bg-white px-4 py-2 text-sm font-medium text-trinova-text transition duration-200 hover:border-trinova-accent hover:text-trinova-accent"
                     >
-                      <Linkedin size={17} strokeWidth={1.8} />
                       LinkedIn
                     </a>
                   )}
@@ -84,9 +81,8 @@ function Contact() {
                     <a
                       href={`mailto:${member.email}`}
                       aria-label={`Email ${member.name}`}
-                      className="inline-flex min-h-10 items-center gap-2 rounded-[10px] border border-trinova-border bg-white px-3.5 py-2 text-sm font-medium text-trinova-text transition duration-200 hover:border-trinova-accent hover:text-trinova-accent"
+                      className="inline-flex min-h-10 items-center justify-center rounded-[10px] border border-trinova-border bg-white px-4 py-2 text-sm font-medium text-trinova-text transition duration-200 hover:border-trinova-accent hover:text-trinova-accent"
                     >
-                      <Mail size={17} strokeWidth={1.8} />
                       Email
                     </a>
                   )}

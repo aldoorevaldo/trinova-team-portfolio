@@ -14,7 +14,7 @@ function Profile() {
   if (!member) {
     return (
       <>
-        <PageTitle title="Member Not Found — TriNova" />
+        <PageTitle title="Member Not Found" />
 
         <section className="bg-trinova-background py-24">
           <Container>
