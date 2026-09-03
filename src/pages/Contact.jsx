@@ -1,162 +1,125 @@
+import { Github, Linkedin, Mail } from "lucide-react"
+import { Link } from "react-router-dom"
+
 import Container from "../components/Container"
 import SectionHeading from "../components/SectionHeading"
-
-const contactItems = [
-  {
-    label: "Email",
-    value: "hello@trinova.dev",
-    href: "mailto:hello@trinova.dev",
-  },
-  {
-    label: "GitHub",
-    value: "github.com/trinova",
-    href: "https://github.com/trinova",
-  },
-  {
-    label: "LinkedIn",
-    value: "linkedin.com/company/trinova",
-    href: "https://linkedin.com/company/trinova",
-  },
-]
+import PageTitle from "../components/PageTitle"
+import members from "../data/members"
 
 function Contact() {
   return (
-    <section className="bg-trinova-background py-20 sm:py-24 lg:py-28">
-      <Container>
-        {/* Header */}
-        <div className="flex flex-col items-center text-center">
-          <SectionHeading
-            eyebrow="CONTACT"
-            title="Let's Connect"
-            description="Whether you're interested in our work, collaboration, or internship opportunities, we'd love to hear from you."
-            align="center"
-          />
-        </div>
+    <>
+      <PageTitle title="Contact — TriNova" />
 
-        {/* Content */}
-        <div className="mt-14 grid gap-8 lg:grid-cols-2">
+      <section className="bg-trinova-background py-20 sm:py-24 lg:py-28">
+        <Container>
 
-          {/* Contact Information */}
-          <div className="rounded-2xl border border-trinova-border bg-trinova-surface p-6 sm:p-8">
-            <p className="text-sm font-semibold uppercase tracking-wider text-trinova-accent">
-              Get In Touch
-            </p>
-
-            <h2 className="mt-3 text-2xl font-bold text-trinova-text">
-              Connect with TriNova
-            </h2>
-
-            <p className="mt-4 max-w-md text-sm leading-7 text-trinova-muted">
-              Find us through our social platforms or reach out directly
-              through email.
-            </p>
-
-            <div className="mt-8 space-y-4">
-              {contactItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  target={
-                    item.href.startsWith("http")
-                      ? "_blank"
-                      : undefined
-                  }
-                  rel={
-                    item.href.startsWith("http")
-                      ? "noreferrer"
-                      : undefined
-                  }
-                  className="group block rounded-xl border border-trinova-border bg-white p-5 transition hover:border-trinova-accent"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-wider text-trinova-muted">
-                    {item.label}
-                  </p>
-
-                  <p className="mt-2 text-sm font-semibold text-trinova-text transition group-hover:text-trinova-accent">
-                    {item.value}
-                  </p>
-                </a>
-              ))}
-            </div>
+          {/* Header */}
+          <div className="flex flex-col items-center text-center">
+            <SectionHeading
+              eyebrow="CONTACT"
+              title="Let's Connect"
+              description="Interested in our work, collaboration, or internship opportunities? Connect with any member of our team."
+              align="center"
+            />
           </div>
 
-          {/* Message Form */}
-          <div className="rounded-2xl border border-trinova-border bg-white p-6 sm:p-8">
-            <p className="text-sm font-semibold uppercase tracking-wider text-trinova-accent">
-              Message
-            </p>
-
-            <h2 className="mt-3 text-2xl font-bold text-trinova-text">
-              Send Us a Message
-            </h2>
-
-            <form className="mt-8 space-y-5">
-              {/* Name */}
-              <div>
-                <label
-                  htmlFor="name"
-                  className="text-sm font-medium text-trinova-text"
-                >
-                  Name
-                </label>
-
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Your name"
-                  className="mt-2 w-full rounded-xl border border-trinova-border bg-white px-4 py-3 text-sm text-trinova-text outline-none transition placeholder:text-trinova-muted focus:border-trinova-accent"
-                />
-              </div>
-
-              {/* Email */}
-              <div>
-                <label
-                  htmlFor="email"
-                  className="text-sm font-medium text-trinova-text"
-                >
-                  Email
-                </label>
-
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="you@example.com"
-                  className="mt-2 w-full rounded-xl border border-trinova-border bg-white px-4 py-3 text-sm text-trinova-text outline-none transition placeholder:text-trinova-muted focus:border-trinova-accent"
-                />
-              </div>
-
-              {/* Message */}
-              <div>
-                <label
-                  htmlFor="message"
-                  className="text-sm font-medium text-trinova-text"
-                >
-                  Message
-                </label>
-
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  placeholder="Tell us what you'd like to discuss..."
-                  className="mt-2 w-full resize-none rounded-xl border border-trinova-border bg-white px-4 py-3 text-sm text-trinova-text outline-none transition placeholder:text-trinova-muted focus:border-trinova-accent"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full rounded-[10px] bg-trinova-accent px-5 py-3 text-sm font-medium text-white transition hover:bg-trinova-accent-hover"
+          {/* Team Contact Cards */}
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {members.map((member) => (
+              <div
+                key={member.id}
+                className="group flex flex-col rounded-2xl border border-trinova-border bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-trinova-accent hover:shadow-lg hover:shadow-slate-200/50 sm:p-7"
               >
-                Send Message →
-              </button>
-            </form>
+                {/* Member Info */}
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-trinova-accent">
+                    Team Member
+                  </p>
+
+                  <h2 className="mt-3 text-2xl font-bold tracking-tight text-trinova-text">
+                    {member.name}
+                  </h2>
+
+                  <p className="mt-1 text-sm font-medium text-trinova-muted">
+                    {member.role}
+                  </p>
+
+                  {member.location && (
+                    <p className="mt-4 text-sm leading-6 text-trinova-muted">
+                      {member.location}
+                    </p>
+                  )}
+                </div>
+
+                {/* Contact Links */}
+                <div className="mt-8 flex flex-wrap gap-3">
+                  {member.github && (
+                    <a
+                      href={member.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${member.name} GitHub`}
+                      className="inline-flex min-h-10 items-center gap-2 rounded-[10px] border border-trinova-border bg-white px-3.5 py-2 text-sm font-medium text-trinova-text transition duration-200 hover:border-trinova-accent hover:text-trinova-accent"
+                    >
+                      <Github size={17} strokeWidth={1.8} />
+                      GitHub
+                    </a>
+                  )}
+
+                  {member.linkedin && (
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${member.name} LinkedIn`}
+                      className="inline-flex min-h-10 items-center gap-2 rounded-[10px] border border-trinova-border bg-white px-3.5 py-2 text-sm font-medium text-trinova-text transition duration-200 hover:border-trinova-accent hover:text-trinova-accent"
+                    >
+                      <Linkedin size={17} strokeWidth={1.8} />
+                      LinkedIn
+                    </a>
+                  )}
+
+                  {member.email && (
+                    <a
+                      href={`mailto:${member.email}`}
+                      aria-label={`Email ${member.name}`}
+                      className="inline-flex min-h-10 items-center gap-2 rounded-[10px] border border-trinova-border bg-white px-3.5 py-2 text-sm font-medium text-trinova-text transition duration-200 hover:border-trinova-accent hover:text-trinova-accent"
+                    >
+                      <Mail size={17} strokeWidth={1.8} />
+                      Email
+                    </a>
+                  )}
+                </div>
+
+                {/* Profile Link */}
+                <div className="mt-auto pt-8">
+                  <Link
+                    to={`/profile/${member.id}`}
+                    className="group/link inline-flex items-center gap-2 text-sm font-semibold text-trinova-text transition hover:text-trinova-accent"
+                  >
+                    View Profile
+                    <span className="transition-transform duration-200 group-hover/link:translate-x-1">
+                      →
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
 
-        </div>
-      </Container>
-    </section>
+          {/* Bottom Message */}
+          <div className="mx-auto mt-16 max-w-2xl text-center">
+            <p className="text-sm leading-7 text-trinova-muted sm:text-base">
+              TriNova is a project team formed for our Kerja Praktek and
+              internship activities. For inquiries, feel free to connect
+              directly with any member of our team.
+            </p>
+          </div>
+
+        </Container>
+      </section>
+    </>
   )
 }
 
