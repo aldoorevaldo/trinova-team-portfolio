@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-trinova-primary: #0F172A;
+  --color-trinova-accent: #3B82F6;
+  --color-trinova-accent-hover: #2563EB;
+
+  --color-trinova-background: #FFFFFF;
+  --color-trinova-surface: #F8FAFC;
+
+  --color-trinova-border: #E2E8F0;
+
+  --color-trinova-text: #0F172A;
+  --color-trinova-muted: #64748B;
+
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: #FFFFFF;
+  color: #0F172A;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+a,
+input,
+textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
