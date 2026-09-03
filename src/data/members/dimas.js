@@ -134,16 +134,6 @@ const dimas = {
       type: "PDF",
       file: "/documents/cv-dimas.pdf",
     },
-    {
-      name: "UI/UX Design Certificate",
-      type: "PDF",
-      file: "/documents/certificate-uiux.pdf",
-    },
-    {
-      name: "Responsive Web Design Certificate",
-      type: "PDF",
-      file: "/documents/certificate-responsive-web.pdf",
-    },
   ],
 }
 

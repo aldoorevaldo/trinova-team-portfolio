@@ -122,16 +122,6 @@ const bagas = {
       type: "PDF",
       file: "/documents/cv-bagas.pdf",
     },
-    {
-      name: "Python Data Science Certificate",
-      type: "PDF",
-      file: "/documents/certificate-python-data-science.pdf",
-    },
-    {
-      name: "Machine Learning Certificate",
-      type: "PDF",
-      file: "/documents/certificate-machine-learning.pdf",
-    },
   ],
 }
 
